@@ -16,8 +16,6 @@ class Nand
     end
 
     def next_generation debug
-        @generation = @generation.nil? ? 0 : @generation
-
         @xs.each_with_index do |x,i|
             cs = Array.new 3, 0
             cs.each_index {|c| cs[c] = x[c] * @ws[c]}
