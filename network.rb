@@ -33,6 +33,7 @@ class Network                                                   # Network togeth
 
             sum     = cs.inject {|sum,c| sum + c}               # Sum of sensor outputs
             network = (1 / (1 + Math::E**(sum * -1))).round 3   # Sigmoid(sum)
+            network = network**2                                # Square the network (optimization?)
             error   = @zs[i] - network                          # Error from target output
             d = error * @learning_rate                          # Error correction
 
