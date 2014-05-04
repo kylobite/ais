@@ -59,7 +59,7 @@ class Network                                                   # Network togeth
                 cache.push next_generation false                # Initialize the cache
             else
                 tmp   = next_generation false                   # Generation to compare to previous
-                state = not (cache.pop == tmp)                  # Change state if generations match
+                state = !(cache.pop == tmp)                     # Change state if generations match
                 unless state                                    # Is this the last loop?
                     @ws = @ws.map {|w| w.round}                 # Round out the weights
                     tmp = @ws                                   # Use rounded weights
