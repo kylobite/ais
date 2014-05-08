@@ -17,7 +17,7 @@ class Nand
         i = 0
         for x in @xs
             sum = 0
-            cs  = for c in [0..x.length-1]
+            for c in [0..x.length-1]
                 sum = sum + x[c] * @ws[c]
             network = if sum > @threshold then 1 else 0
             error   = @zs[i] - network

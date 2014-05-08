@@ -58,3 +58,4 @@ end
 
 training_set = [[[0,0],1],[[0,1],1],[[1,0],1],[[1,1],0]]
 nn = Nand.new training_set
+puts nn.solve.inspect
