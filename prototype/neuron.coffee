@@ -23,9 +23,9 @@ class Neuron
         for x in @xs
             ns[i] = [-1]
 
-            n = 0
+            n = 1
             for neuron in @neurons
-                ns[i][n+1] = neuron.parse_neuron x, i
+                ns[i][n] = neuron.parse_neuron x, i
                 n = n + 1
             i = i + 1
 
