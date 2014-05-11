@@ -18,4 +18,3 @@ xnor_neuron.load_neurons [and_neuron,or_neuron]
 
 xnor_neuron.solve
 xnor_neuron.next_generation true
-
